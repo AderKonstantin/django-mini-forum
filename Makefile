@@ -36,5 +36,8 @@ migrate:
 makemigrations:
 	poetry run python manage.py makemigrations
 
+.PHONY: updatemodels
+updatemodels: makemigrations migrate runserver ;
+
 .PHONY: update
 update: install migrate ;
