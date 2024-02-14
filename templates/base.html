@@ -1,0 +1,65 @@
+{% load static %}
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>AderKI Blog</title>
+  </head>
+  <body>
+    <header>
+      <!-- Header -->
+      <div class="header-line">
+        <ul>
+          <li class="fs-64"><a id="logo" href="">AderKI</a></li>
+          <li class="fs-48"><a id="logo" href="index-ru.html">.ru</a></li>
+        </ul>
+      </div>
+      <div class="header-description fs-32">
+        <p> Hello. I’m a Student from Moscow. There is my blog, where i'm posting about Computer Science, Operation System, Network, etc. (Yep, most posts originally in Russian, but we have a Google translator, which can translate article for your language). Hope u enjoy it!
+        </p>
+      </div>
+      <div class="control-panel fs-24">
+        <text>About Games</text>
+        <ul class="vertical-menu">
+          <li class="vertical-menu-item">
+            <div class="block"></div>
+          </li>
+          <li class="vertical-menu-item">
+            <div class="block"></div>
+          </li>
+        </ul>
+      </div>      
+    </header>
+    
+    <div class="main-wrapper">
+      <main>
+        <!-- Main Content -->
+        {% for blogpost in blogposts %}
+      </main>
+    </div>
+    
+    <footer>
+      <!-- Footer -->
+      <ul>
+        <!-- Socials -->
+        <li class="fs-32"><h3>Socials</h3></li>
+        <li><a href="">GitHub</a></li>
+        <li><a href="">Steam</a></li>
+      </ul>
+      <ul>
+        <!-- Games -->
+        <li class="fs-32"><h3>Games</h3></li>
+        <li><a href="">Joe The Rabbit</a></li>
+      </ul>
+      <ul>
+        <!-- Projects -->
+        <li class="fs-32"><h3>Other Projects</h3></li>
+        <li><a href="">Ader Berry Bot (Telegram)</a></li>
+        <li><a href="">Hoodio.Life</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
